@@ -3,3 +3,5 @@ flask-sqlalchemy
 flask-bcrypt
 flask-login
 Pillow
+python2-secrets
+flask-mail

@@ -8,6 +8,7 @@
     {% else %}
         <title>Any Posts</title>
     {% endif %}
+    <link rel="icon" href="{{url_for('static', filename='l.png')}}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
@@ -36,7 +37,8 @@
       
               <div class="navbar-nav">
                 {% if current_user.is_authenticated %}
-                <a class="nav-item nav-link" href="{{url_for('new_post')}}">New Blog Post</a>
+                <a class="nav-item nav-link" href="{{url_for('account')}}">Welcome [{{ current_user.username }}]</a>
+                <a class="nav-item nav-link" href="{{url_for('new_post')}}">New Post</a>
                   <a class="nav-item nav-link" href="{{url_for('account')}}">Account</a>
                   <a class="nav-item nav-link" href="{{url_for('logout')}}">Logout</a>
                 {% else %}
